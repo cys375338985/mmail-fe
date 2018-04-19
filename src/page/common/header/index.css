@@ -1,0 +1,32 @@
+.header .logo{
+    position: absolute;
+    display: inline-block;
+    left: 60px;
+    top: 40px;
+    font-size: 36px;
+    color: #c60023;
+    z-index: 2;
+    font-weight: bold;
+}
+.header .serch-con{
+    position: relative;
+    width: 750px;
+   padding: 40px 0 30px 250px;
+}
+
+.header .serch-con .search-input{
+    display: inline-block;
+    width: 550px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: 2px solid #c60023;
+    outline: none;
+}
+
+.header .serch-con .search-btn{
+    position: absolute;
+    border: 2px solid #c60023;
+    height: 46px;
+}

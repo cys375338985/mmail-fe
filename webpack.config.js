@@ -39,10 +39,10 @@ var config ={
             {
                 test: /\.string$/,
                 loader: 'html-loader',
-                query : {
+               /* query : {
                     minimize : true,
                     removeAttributeQuotes : false
-                }
+                }*/
             }
         ]
     },
