@@ -7,12 +7,12 @@ var  HtmlWebpackPlugin = require('html-webpack-plugin');
 var WEBPACK_ENV         = process.env.WEBPACK_ENV || 'dev';
 
 
-var getHtmlConfig = function(name){
+var getHtmlConfig = function(name,title){
     return {
         template    : './src/view/' + name + '.html',
         filename    : 'view/' + name + '.html',
        // favicon     : './favicon.ico',
-       // title       : title,
+        title       : title,
         inject      : true,
         hash        : true,
         chunks      : ['common', name]
@@ -22,7 +22,9 @@ var config ={
     entry:{
         'common':['./src/page/common/index.js'],
         'index':['./src/page/index/index.js'],
-        'login':['./src/page/login/index.js']
+        'login':['./src/page/login/index.js'],
+        'result':['./src/page/result/index.js']
+
     },
     output:{
         path:'./dist/',
@@ -63,8 +65,9 @@ var config ={
             filename : 'js/base.js'
         }),
         new ExtractTextPlugin("css/[name].css"),
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login'))
+        new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('login','登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result','结果'))
     ]
     //
 };

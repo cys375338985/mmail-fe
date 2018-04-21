@@ -1,6 +1,7 @@
 body{
     padding:0;
     margin:0;
+    background: #f6f6f6;
 }
 li,a,*:not(script,style,title){
     padding: 0;
