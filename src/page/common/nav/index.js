@@ -10,7 +10,7 @@ var nav = {
         this.loadCarCount();
         return this;
     }, bindEvent: function () {
-        $('.js-login').click(function () {
+        $('.js-user-login').click(function () {
             mm.doLogin();
         });
         $('.js-register').click(function () {
@@ -26,7 +26,7 @@ var nav = {
     },
     loadUserInfo: function () {
         userservice.checkLogin(function (res) {
-            $('.user-info.not-login')
+            $('.user-info.not-user-login')
                 .hide().sibling('.user.login')
                 .show().find('.username')
                 .text(res.uername);

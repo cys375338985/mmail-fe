@@ -12,7 +12,7 @@
 * */
 var Hogan = require('hogan');
 var conf = {
-    serverHost:''
+    serverHost:'http://tomcat.mmail.com'
 };
 var _mm={
     request : function (param ) {
@@ -75,7 +75,7 @@ var _mm={
         }
     },
     doLogin: function () {
-        window.location.href='./view/login.html?redirect='+(encodeURIComponent(window.location.href));
+        window.location.href='./view/user-login.html?redirect='+(encodeURIComponent(window.location.href));
     },
     goHome: function () {
         window.location.href='./view/index.html';

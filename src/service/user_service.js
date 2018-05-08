@@ -14,6 +14,15 @@ var _user = {
             success : resolve,
             error : reject
         });
+    },
+    login: function (userinfo,resolve , reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/login.do'),
+            method : 'POST',
+            data: userinfo,
+            success : resolve,
+            error : reject
+        });
     }
 };
 module.exports=_user;
