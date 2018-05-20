@@ -23,8 +23,12 @@ var config ={
         'common':['./src/page/common/index.js'],
         'index':['./src/page/index/index.js'],
         'user-login':['./src/page/user-login/index.js'],
+        'user-register':['./src/page/user-register/index.js'],
+        'user-pass-reset':['./src/page/user-pass-reset/index.js'],
+        'user-centenr':['./src/page/user-centenr/index.js'],
+        'user-centenr-update':['./src/page/user-centenr-update/index.js'],
+        'user-password-update':['./src/page/user-password-update/index.js'],
         'result':['./src/page/result/index.js']
-
     },
     output:{
         path:'./dist/',
@@ -67,7 +71,13 @@ var config ={
         new ExtractTextPlugin("css/[name].css"),
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register','注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-centenr','个人中心')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-centenr-update','修改个人信息')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-password-update','修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','结果'))
+
     ]
     //
 };

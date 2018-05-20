@@ -7,14 +7,14 @@ var nav = {
     init: function () {
         this.bindEvent();
         this.loadCarCount();
-        this.loadCarCount();
+        this.loadUserInfo();
         return this;
     }, bindEvent: function () {
-        $('.js-user-login').click(function () {
+        $('.js-login').click(function () {
             mm.doLogin();
         });
         $('.js-register').click(function () {
-            window.location.href = './view/register.html';
+            window.location.href = './user-register.html';
         });
         $(".js-logout").click(function () {
             userservice.logout(function (res) {
@@ -26,10 +26,12 @@ var nav = {
     },
     loadUserInfo: function () {
         userservice.checkLogin(function (res) {
-            $('.user-info.not-user-login')
-                .hide().sibling('.user.login')
+            $('.user-info.not-login')
+                .hide();
+            console.log(JSON.stringify(res));
+            $('.user-info.login')
                 .show().find('.username')
-                .text(res.uername);
+                .text(res.data.username);
         }, function (erMsg) {
 
         });

@@ -30,3 +30,12 @@
     border: 2px solid #c60023;
     height: 46px;
 }
+
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px ;
+    border-top: 2px solid #c60023;
+}

@@ -12,7 +12,7 @@
 * */
 var Hogan = require('hogan');
 var conf = {
-    serverHost:'http://tomcat.mmail.com'
+    serverHost:'http://www.mmail.com/apis'
 };
 var _mm={
     request : function (param ) {
@@ -31,12 +31,10 @@ var _mm={
                 }else if(1 === res.status){
                     typeof param.error === "function" && param.error(res.msg);
                 }
-
             },
             error : function (err) {
                 typeof param.error === "function" && param.error(err.statusText);
             }
-
         });
     },
     getServerUrl : function (path) {
@@ -56,9 +54,10 @@ var _mm={
     },
     successTips : function (msg) {
 
+            alert("成功:"+msg);
     },
     errorTips: function (msg) {
-
+        alert("失败："+msg);
     },
     validata: function (value,type) {
         value=$.trim(value);
@@ -75,10 +74,10 @@ var _mm={
         }
     },
     doLogin: function () {
-        window.location.href='./view/user-login.html?redirect='+(encodeURIComponent(window.location.href));
+        window.location.href='./user-login.html?redirect='+(encodeURIComponent(window.location.href));
     },
     goHome: function () {
-        window.location.href='./view/index.html';
+        window.location.href='./index.html';
 
     }
 };

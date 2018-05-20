@@ -32,6 +32,27 @@ a{text-decoration: none}
     position: relative;
     overflow: hidden;
 }
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+
+}
+
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #EEE;
+}
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+
 .large .w{
     width: 1600px;
 }
@@ -70,7 +91,7 @@ a{text-decoration: none}
     padding: 0 10px;
 
 }
-.loding{
+.loading{
 
     display: block;
     background:#E8E8E8 url("../../image/icon/loading.gif")  no-repeat center;
