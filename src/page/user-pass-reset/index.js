@@ -94,7 +94,7 @@ var page = {
         if(validateResult.statis){
             userService.login(formData,function (res) {
                     window.location.href = mm.getUrlParam('redirect')
-                        || './index.html';
+                        || './index.string';
                 },
                 function (errMsg) {
                     _this.errorShow(errMsg);

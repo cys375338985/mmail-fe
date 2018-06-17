@@ -6,6 +6,15 @@ var _cat = {
             success : resolve,
             error : reject
         });
+    },
+    addToCart : function (data,resolve , reject) {
+        resolve({});
+       //_mm.request({
+       //     url: _mm.getServerUrl('/cart/add.do'),
+       //     data: data,
+       //     success : resolve,
+       //     error : reject
+       // });
     }
 };
 module.exports= _cat;

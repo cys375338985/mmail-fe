@@ -28,7 +28,9 @@ var config ={
         'user-centenr':['./src/page/user-centenr/index.js'],
         'user-centenr-update':['./src/page/user-centenr-update/index.js'],
         'user-password-update':['./src/page/user-password-update/index.js'],
-        'result':['./src/page/result/index.js']
+        'result':['./src/page/result/index.js'],
+        'list':['./src/page/list/index.js'],
+        'detail':['./src/page/detail/index.js']
     },
     output:{
         path:'./dist/',
@@ -76,8 +78,9 @@ var config ={
         new HtmlWebpackPlugin(getHtmlConfig('user-centenr','个人中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-centenr-update','修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-password-update','修改密码')),
-        new HtmlWebpackPlugin(getHtmlConfig('result','结果'))
-
+        new HtmlWebpackPlugin(getHtmlConfig('result','结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('list','商品列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情'))
     ]
     //
 };

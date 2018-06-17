@@ -78,7 +78,6 @@ var _mm={
     },
     goHome: function () {
         window.location.href='./index.html';
-
     }
 };
 module.exports=_mm;

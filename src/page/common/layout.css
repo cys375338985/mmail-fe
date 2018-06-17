@@ -92,7 +92,6 @@ a{text-decoration: none}
 
 }
 .loading{
-
     display: block;
     background:#E8E8E8 url("../../image/icon/loading.gif")  no-repeat center;
     background-size:cover;
@@ -100,4 +99,20 @@ a{text-decoration: none}
     height: 65px;
     margin: 0 auto;
     border: 1px solid #DDDDDD;
+}
+.user-select-none{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.err-tip{
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background: #eee;
 }
