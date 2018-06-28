@@ -30,7 +30,8 @@ var config ={
         'user-password-update':['./src/page/user-password-update/index.js'],
         'result':['./src/page/result/index.js'],
         'list':['./src/page/list/index.js'],
-        'detail':['./src/page/detail/index.js']
+        'detail':['./src/page/detail/index.js'],
+        'cart':['./src/page/cart/index.js']
     },
     output:{
         path:'./dist/',
@@ -80,11 +81,11 @@ var config ={
         new HtmlWebpackPlugin(getHtmlConfig('user-password-update','修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','结果')),
         new HtmlWebpackPlugin(getHtmlConfig('list','商品列表')),
-        new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情'))
+        new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情')),
+        new HtmlWebpackPlugin(getHtmlConfig('cart','购物车'))
     ]
     //
 };
-
 if('dev' === WEBPACK_ENV){
     console.log('dev');
     config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');

@@ -41,7 +41,6 @@ var page = {
             var minCount = 1;
             var maxCount= parseInt(_this.data.pagedata.stock);
             if($this.hasClass('plus') && count<maxCount){
-
                 $inputcount.val(++count);
                 return;
             }

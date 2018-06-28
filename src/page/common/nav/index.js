@@ -38,7 +38,7 @@ var nav = {
     },
     loadCarCount: function () {
         cartservice.getCartCount(function (res) {
-            $('.nav .nav-item .cart-cont').text(res || 0);
+            $('.nav .nav-item .cart-cont').text(res.data || 0);
         }, function (errMsg) {
             $('.nav .nav-item .cart-cont').text(0);
         });
