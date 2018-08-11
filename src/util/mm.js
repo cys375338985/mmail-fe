@@ -10,12 +10,13 @@
 * }
 *
 * */
-var Hogan = require('hogan');
+var Hogan = require('hogan.js');
 var conf = {
     serverHost:'http://www.mmail.com/apis'
+   // serverHost:'http://cys.s1.natapp.cc/apis'
 };
 var _mm={
-    request : function (param ) {
+    request : function (param) {
         var _this= this;
         $.ajax({
             type: param.method||'get',
