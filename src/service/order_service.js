@@ -42,7 +42,26 @@ var order_service = {
             success: resolve,
             error: reject
         });
+    },
+    pay: function (data,resolve,reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/pay.do'),
+            data: {
+                orderNo: data
+            },
+            success: resolve,
+            error: reject
+        });
+    },
+    getPaymentStaus: function (data,resolve,reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/query_order_pay_status.do'),
+            data: {
+                orderNo: data
+            },
+            success: resolve,
+            error: reject
+        });
     }
-
 };
 module.exports= order_service;
